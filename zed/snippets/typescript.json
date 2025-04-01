@@ -1,0 +1,19 @@
+{
+  "Log to the console": {
+    "prefix": "clg",
+    "body": ["console.log($1);", "$0"],
+    "description": "Log to the console"
+  },
+  "Nestjs service": {
+    "prefix": "nsvs",
+    "body": [
+      "import { Injectable } from '@nestjs/common';",
+      "$0",
+      "@Injectable()",
+      "export class $1 {",
+      "\tconstructor($2) {}",
+      "}"
+    ],
+    "description": "Insert nestjs service"
+  }
+}
