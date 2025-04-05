@@ -10,7 +10,7 @@ if vim.g.lazyvim_picker == "telescope" then
 end
 
 map(
-  "n",
+  { "n", "v" },
   "<leader>fw",
   "<cmd>Telescope grep_string<cr>",
   { desc = "Search string under the cursor gre_string (global)" }
