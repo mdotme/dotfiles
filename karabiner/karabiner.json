@@ -1,58 +1,70 @@
 {
-    "profiles": [
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Swap left-ctrl and command only in Ghostty, but allow Cmd+Ctrl combos",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com\\.mitchellh\\.ghostty$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_command",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "left_control" }],
+                "to_delayed_action": {
+                  "to_if_canceled": [{ "key_code": "left_command" }]
+                },
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com\\.mitchellh\\.ghostty$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "left_command" }],
+                "to_delayed_action": {
+                  "to_if_canceled": [{ "key_code": "left_control" }]
+                },
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "Toggle focus with f6",
+            "manipulators": [
+              {
+                "from": { "key_code": "f6" },
+                "to": [{ "shell_command": "shortcuts run 'Toggle Focus'" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Default profile",
+      "selected": true,
+      "simple_modifications": [
         {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Swap left-ctrl and command only in Ghostty, but allow Cmd+Ctrl combos",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "left_command" }] },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_command" }],
-                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "left_control" }] },
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "name": "Default profile",
-            "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "escape" }]
-                }
-            ],
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+          "from": { "key_code": "caps_lock" },
+          "to": [{ "key_code": "escape" }]
         }
-    ]
+      ],
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
 }
+
