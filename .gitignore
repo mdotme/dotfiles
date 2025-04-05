@@ -16,5 +16,6 @@ lazy-lock.json
 !nvim/
 !zed/
 !zsh/
+!tmux/
 !.gitignore
 !README.md
