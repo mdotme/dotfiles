@@ -1,15 +1,19 @@
-# Manuchehr's Neovim config with 💤 LazyVim
+# My Neovim config with 💤 LazyVim
+
+Setup for:
+
+- JavaScript/TypeScript
+- Vue/Nuxt
+- Tailwindcss
+- Nodejs
 
 Visit [LazyVim](https://github.com/LazyVim/LazyVim) for more info.
 Refer to the [documentation](https://lazyvim.github.io/installation).
 
-## Installation
+## Showcase
 
-```bash
-git clone https://github.com/manuchekhr32/my-nvim-config ~/.config/nvim
-```
+![Manuchehr's neovim showcase](./screenshots/showcase1.png)
 
-## Screenshots
+![Manuchehr's neovim showcase](./screenshots/showcase2.png)
 
-![Coding](./screenshots/coding.png)
-![Coding](./screenshots/welcome.png)
+![Manuchehr's neovim showcase](./screenshots/showcase3.png)
