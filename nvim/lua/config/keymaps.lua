@@ -26,4 +26,8 @@ map("n", "<C-w>", function()
   Snacks.bufdelete()
 end, { desc = "Delete Buffer" })
 
+map("n", "<leader>bO", function()
+  Snacks.bufdelete.all()
+end, { desc = "Delete all Buffers" })
+
 map("n", ",p", '"0p', { noremap = true, silent = true, desc = "Paste last yankeed text" })
