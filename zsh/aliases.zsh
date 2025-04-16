@@ -9,6 +9,15 @@ gacp() {
 alias vi="nvim"
 alias pd="pnpm dev"
 alias yd="yarn dev"
+# Docker
+alias dcup="docker compose up -d"
+alias dcd="docker compose down"
+alias dvolrm='docker volume rm $(docker volume ls -q)'
+alias dsysprune='docker system prune -a --volumes' # full cleanup (images, containers, volumes, networks)
+alias dce='docker-compose exec'
+# Fun
+alias please='sudo $(fc -ln -1)'
+alias shrug='echo ¯\\\_(ツ)_/¯'
 
 # Global ENV
 export NODE_ENV="development"
