@@ -7,6 +7,9 @@ foo.*
 *.log
 data
 
+tmux/plugins/
+zed/prompts
+
 .DS_Store
 lazy-lock.json
 

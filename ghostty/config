@@ -2,7 +2,7 @@ font-family = JetBrainsMono Nerd Font Mono
 font-size = 15
 shell-integration-features = no-cursor
 cursor-style = block
-cursor-style-blink = false
+cursor-style-blink = true
 
 theme = man-green
 background-opacity = 0.8

@@ -38,8 +38,9 @@
   "scrollbar": {
     "show": "never"
   },
-  "agent": {
+  "assistant": {
     "enabled": false,
+    "version": "2",
     "dock": "right"
   },
   // Indentation, rainbow indentation
@@ -59,13 +60,13 @@
     "metrics": false
   },
   "chat_panel": {
-    "button": "never"
+    "button": false
   },
   "collaboration_panel": {
     "button": false
   },
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "inline_completion_provider": "supermaven"
   },
 
   // Langs

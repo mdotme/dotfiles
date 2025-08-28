@@ -9,6 +9,13 @@ gacp() {
 alias vi="nvim"
 alias pd="pnpm dev"
 alias yd="yarn dev"
+# Python
+alias python="python3"
+alias py="python"
+alias pip="pip3"
+# Dotnet
+alias dn="dotnet"
+alias dnr="dotnet run"
 # Docker
 alias dcup="docker compose up -d"
 alias dcd="docker compose down"
