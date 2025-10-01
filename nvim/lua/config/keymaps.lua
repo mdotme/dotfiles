@@ -6,7 +6,6 @@ local map = vim.keymap.set
 
 if vim.g.lazyvim_picker == "telescope" then
   map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Find files (Telescope)" })
-  map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Search string live_grep (global)" })
 end
 
 map(
