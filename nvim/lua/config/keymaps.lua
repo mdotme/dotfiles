@@ -30,3 +30,9 @@ map("n", "<leader>bO", function()
 end, { desc = "Delete all Buffers" })
 
 map("n", ",p", '"0p', { noremap = true, silent = true, desc = "Paste last yankeed text" })
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+-- Mapped alt-hjkl to arrows in karabiner
+vim.keymap.set("v", "<Down>", ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "<Up>", ":m '<-2<CR>gv=gv", { silent = true })
