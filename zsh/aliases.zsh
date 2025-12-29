@@ -28,3 +28,10 @@ alias shrug='echo ¯\\\_(ツ)_/¯'
 
 # Global ENV
 export NODE_ENV="development"
+
+# C
+crun() {
+  gcc "$1.c" -o $1
+  ./$1
+  rm $1
+}

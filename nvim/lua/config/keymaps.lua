@@ -6,14 +6,16 @@ local map = vim.keymap.set
 
 if vim.g.lazyvim_picker == "telescope" then
   map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Find files (Telescope)" })
+  map(
+    { "n", "v" },
+    "<leader>fw",
+    "<cmd>Telescope grep_string<cr>",
+    { desc = "Search string under the cursor gre_string (global)" }
+  )
+elseif vim.g.lazyvim_picker == "fzf" then
+  map("n", "<C-p>", "<cmd>FzfLua files<cr>", { desc = "Find files (FzfLua)" })
+  map({ "n", "v" }, "<leader>fw", "<cmd>FzfLua grep_cword<cr>", { desc = "Search string under the cursor (global)" })
 end
-
-map(
-  { "n", "v" },
-  "<leader>fw",
-  "<cmd>Telescope grep_string<cr>",
-  { desc = "Search string under the cursor gre_string (global)" }
-)
 
 -- Normal mode: Replace the word under the cursor and go into insert mode
 map("n", "<leader>cw", "*Ncgn", { noremap = true, silent = true, desc = "Change word under cursor" })

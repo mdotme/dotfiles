@@ -15,4 +15,5 @@ vim.opt.path:append({ "**" })
 -- vim.opt.mouse = ""
 vim.opt.formatoptions:append({ "r" })
 vim.g.snacks_animate = false
-vim.g.lazyvim_picker = "telescope" -- Or fzf
+-- vim.g.lazyvim_picker = "telescope" -- Or fzf
+vim.g.lazyvim_picker = "fzf" -- Or fzf
