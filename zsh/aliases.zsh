@@ -2,7 +2,8 @@
 gacp() {
   git add .
   git commit -m $1
-  gp
+  # gp
+  git push origin $(git branch --show-current) # Push to the current branch
 }
 
 # Aliases
