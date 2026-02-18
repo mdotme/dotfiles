@@ -38,3 +38,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 -- Mapped alt-hjkl to arrows in karabiner
 vim.keymap.set("v", "<Down>", ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "<Up>", ":m '<-2<CR>gv=gv", { silent = true })
+
+map("n", "<leader>ce", "<cmd>e .env<cr>", { desc = "Edit .env file" })
