@@ -93,7 +93,7 @@
           },
 
           {
-            "description": "option + shift + hjkl → option + arrow keys (word jump)",
+            "description": "option + shift + hjkl → option + shift + arrow keys",
             "manipulators": [
               {
                 "from": {
@@ -103,7 +103,7 @@
                 "to": [
                   {
                     "key_code": "left_arrow",
-                    "modifiers": ["option"]
+                    "modifiers": ["option", "shift"]
                   }
                 ],
                 "type": "basic"
@@ -116,7 +116,7 @@
                 "to": [
                   {
                     "key_code": "down_arrow",
-                    "modifiers": ["option"]
+                    "modifiers": ["option", "shift"]
                   }
                 ],
                 "type": "basic"
@@ -129,7 +129,7 @@
                 "to": [
                   {
                     "key_code": "up_arrow",
-                    "modifiers": ["option"]
+                    "modifiers": ["option", "shift"]
                   }
                 ],
                 "type": "basic"
@@ -142,7 +142,7 @@
                 "to": [
                   {
                     "key_code": "right_arrow",
-                    "modifiers": ["option"]
+                    "modifiers": ["option", "shift"]
                   }
                 ],
                 "type": "basic"

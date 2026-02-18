@@ -175,6 +175,17 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Lock button",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "insert"
+                },
+                "to": [{ "shell_command": "shortcuts run 'Lock'" }]
+              }
+            ]
           }
         ]
       },
