@@ -17,3 +17,4 @@ vim.opt.formatoptions:append({ "r" })
 vim.g.snacks_animate = false
 -- vim.g.lazyvim_picker = "telescope" -- Or fzf
 vim.g.lazyvim_picker = "fzf"
+vim.g.lazyvim_eslint_auto_format = true

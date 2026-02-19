@@ -16,6 +16,16 @@ return {
           buffer = bufnr,
           desc = "Fix all ESLint problems",
         })
+
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          callback = function()
+            if vim.g.lazyvim_eslint_auto_format ~= false then
+              vim.cmd("EslintFixAll")
+            end
+          end,
+          desc = "Run ESLint fix on save only if enabled",
+        })
       end,
       handlers = {
         ["workspace/diagnostic/refresh"] = function(_, _, _, _)
