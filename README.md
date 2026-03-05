@@ -9,3 +9,25 @@ I keep my dotfiles here. You can find:
 - 🪟 [tmux](https://github.com/tmux/tmux/wiki) - Terminal multiplexer.
 
 and others...
+
+## Karabiner elements mapping
+
+| Key            | Result | Category   |
+| :------------- | :----: | :--------- |
+| **Option + H** |  `←`   | Navigation |
+| **Option + J** |  `↓`   | Navigation |
+| **Option + K** |  `↑`   | Navigation |
+| **Option + L** |  `→`   | Navigation |
+| **Option + I** |  `!`   | Symbol     |
+| **Option + W** |  `@`   | Symbol     |
+| **Option + E** |  `#`   | Symbol     |
+| **Option + M** |  `$`   | Symbol     |
+| **Option + F** |  `%`   | Symbol     |
+| **Option + Y** |  `^`   | Symbol     |
+| **Option + ;** |  `&`   | Symbol     |
+| **Option + N** |  `*`   | Symbol     |
+| **Option + ,** |  `(`   | Symbol     |
+| **Option + .** |  `)`   | Symbol     |
+| **Option + O** |  `-`   | Symbol     |
+| **Option + P** |  `=`   | Symbol     |
+| **Option + U** |  `_`   | Symbol     |

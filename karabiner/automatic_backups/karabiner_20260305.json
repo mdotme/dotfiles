@@ -1,0 +1,204 @@
+{
+  "global": { "show_in_menu_bar": false },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Toggle focus with f6",
+            "manipulators": [
+              {
+                "from": { "key_code": "f6" },
+                "to": [{ "shell_command": "shortcuts run 'Toggle Focus'" }],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "option + hjkl → arrow keys",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [{ "key_code": "left_arrow" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [{ "key_code": "down_arrow" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [{ "key_code": "up_arrow" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [{ "key_code": "right_arrow" }],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "option + shift + hjkl → option + arrow keys (word jump)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": { "mandatory": ["option", "shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": { "mandatory": ["option", "shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": { "mandatory": ["option", "shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": { "mandatory": ["option", "shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "Right Command + T opens or focuses terminal (Ghostty)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "t",
+                  "modifiers": { "mandatory": ["right_command"] }
+                },
+                "to": [{ "shell_command": "open -a 'Ghostty'" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Right Command + B opens or focuses default browser (Arc)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "b",
+                  "modifiers": { "mandatory": ["right_command"] }
+                },
+                "to": [{ "shell_command": "open -a 'Arc'" }],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "Swap [ and { behavior",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": { "mandatory": ["shift"] }
+                },
+                "to": [{ "key_code": "open_bracket", "modifiers": [] }]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "open_bracket"
+                },
+                "to": [
+                  { "key_code": "open_bracket", "modifiers": ["left_shift"] }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "close_bracket",
+                  "modifiers": { "mandatory": ["shift"] }
+                },
+                "to": [{ "key_code": "close_bracket", "modifiers": [] }]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "close_bracket"
+                },
+                "to": [
+                  { "key_code": "close_bracket", "modifiers": ["left_shift"] }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 12870,
+            "vendor_id": 6645
+          },
+          "ignore": false
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "simple_modifications": [
+        {
+          "from": { "key_code": "caps_lock" },
+          "to": [{ "key_code": "escape" }]
+        }
+      ],
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
+}
