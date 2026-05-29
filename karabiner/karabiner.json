@@ -298,6 +298,57 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Remap F13 to Control+Command+Q",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f13",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "q",
+                    "modifiers": ["left_control", "left_command"]
+                  }
+                ]
+              }
+            ]
+          },
+
+          {
+            "description": "Chrome: Cmd+Shift+C copies current tab URL",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": ["command", "shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "l",
+                    "modifiers": ["command"]
+                  },
+                  {
+                    "key_code": "c",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

@@ -36,7 +36,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.java" },
     -- { import = "lazyvim.plugins.extras.util.dot" },
     -- { import = "lazyvim.plugins.extras.util.project" },
-    { import = "lazyvim.plugins.extras.editor.leap" },
+    -- { import = "lazyvim.plugins.extras.editor.leap" },
     { import = "lazyvim.plugins.extras.editor.mini-move" },
     { import = "lazyvim.plugins.extras.editor.outline" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },

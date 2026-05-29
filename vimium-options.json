@@ -1,0 +1,14 @@
+{
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.youtube.com/*"
+    }
+  ],
+  "keyMappings": "# --- Navigation & Scrolling ---\n# Native j/k works. Let's map half-page scrolls to match modern configs\nmap <c-d> scrollPageDown\nmap <c-u> scrollPageUp\n\n# --- Tab Management (LazyVim Style: Bufferline behavior) ---\n# Cycle tabs with H and L (like switching buffers via [b / ]b)\n# Note: We unmap H and L from native goBack/goForward first so they can be re-bound cleanly.\nunmap H\nunmap L\nmap L nextTab\nmap H previousTab\n\n# Create/Close Tabs (LazyVim window/buffer bindings)\nmap <space>fn createTab\nmap <space>bd removeTab\nmap u restoreTab\n\n# Move tabs around\nmap <space>bl moveTabLeft\nmap <space>br moveTabRight\n\n# --- URL & Clipboard Control ---\n# Cmd+Shift+C to copy URL (Meta key 'm' handles Cmd on macOS)\nmap <m-C> copyCurrentUrl\n\n# Yank / Paste bindings\nmap yf LinkHints.activateModeToCopyLinkUrl\nmap p openCopiedUrlInCurrentTab\nmap P openCopiedUrlInNewTab\n\n# --- History & Navigation ---\n# Jump backward/forward in tab history (Standard Vim jump list binds)\nmap <c-o> goBack\nmap <c-i> goForward\n\n# --- Search & Link Interaction (Telescope / FZF-Lua Style) ---\n# Space-Space launches the global search (Vomnibar)\nmap <space><space> Vomnibar.activate\nmap <space>ff Vomnibar.activateTabSelection\nmap <space>fb Vomnibar.activateBookmarks\n\n# Link Hints (f for current tab, F for background)\nmap f LinkHints.activateMode\nmap F LinkHints.activateModeToOpenInNewTab",
+  "settingsVersion": "2.4.2"
+}
